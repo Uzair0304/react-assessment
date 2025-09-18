@@ -1,11 +1,6 @@
 import { genderOptions } from "@/lib/constants";
 import { UserFiltersType } from "@/lib/types";
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-} from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 
 type ComponentProps = {
@@ -21,6 +16,7 @@ const Filters = ({ filters, setFilters }: ComponentProps) => {
           <InputLabel id="gender">Select Gender</InputLabel>
           <Select
             labelId="gender"
+            sx={{ fontSize: "14px","& .MuiSelect-select":{padding:"15px"} }}
             id="genderSelect"
             value={filters.gender}
             label="Age"

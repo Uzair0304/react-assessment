@@ -19,7 +19,7 @@ const ProfileCard = ({ data, icons }: ProfileCardProps) => {
               width={150}
               height={150}
               src={data.thumbnail}
-              alt={data.thumbnail}
+              alt={"avatar"}
               className="w-full h-full rounded-full object-cover"
             />
           </div>
@@ -31,7 +31,7 @@ const ProfileCard = ({ data, icons }: ProfileCardProps) => {
           </h1>
         </div>
         <div className="flex gap-10 justify-center">
-          {icons.map((item) => (
+          {icons.map((item: IconsType) => (
             <div
               className="hover:cursor-pointer"
               key={item.title}

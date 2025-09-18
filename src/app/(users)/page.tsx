@@ -9,7 +9,7 @@ export const metdata: Metadata = {
 const page = async () => {
   return (
     <div className="p-10">
-      <h1 className="text-3xl font-bold mb-3 text-center">Random Users data</h1>
+      <h1 className="text-3xl font-bold mb-3 text-center">Random Users</h1>
       <UsersListing />
     </div>
   );

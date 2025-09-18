@@ -27,6 +27,7 @@ const UsersListing = () => {
         const UsersModule = await import("@/api/api");
         const { getUsersData } = UsersModule;
         const resp = await getUsersData(filters);
+        
         const users = resp.results.map((user: UserResponseType) => ({
           id: user.login.uuid,
           thumbnail: user.picture.large,
@@ -45,6 +46,8 @@ const UsersListing = () => {
     };
     getUsers();
   }, [filters.gender, filters.page, filters.results]);
+  console.log(users);
+  
 
   const columns: GridColDef[] = [
     {
@@ -106,7 +109,9 @@ const UsersListing = () => {
       <h1 className="text-2xl mb-3">Total Users {users.length}</h1>
       <Filters filters={filters} setFilters={setFilters} />
       {status === "loading" ? (
-        <TableSkeleton rowsCount={4} colCount={4} />
+        <div className="bg-white">
+          <TableSkeleton rowsCount={4} colCount={4} />
+        </div>
       ) : (
         <DataGrid
           rows={users}
