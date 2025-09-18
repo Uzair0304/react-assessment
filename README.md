@@ -1,10 +1,10 @@
 ## Technologies Used
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [ESLint](https://eslint.org/) With Standard configurations
-- [MUI](https://mui.com/)
-- [TailwindCSS](https://tailwindcss.com/)
+- [React.js](https://react.dev/) - used for components
+- [Next.js](https://nextjs.org/) - used only for routing here
+- [ESLint](https://eslint.org/) - to detect linting errors
+- [MUI](https://mui.com/) - used for UI components
+- [TailwindCSS](https://tailwindcss.com/) - used for styling
 
 ## Installation
 
