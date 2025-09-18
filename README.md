@@ -2,12 +2,13 @@
 
 - [Next.js](https://nextjs.org/)
 - [React](https://react.dev/)
-- [ESLint](https://eslint.org/) with Prettier and Standard configurations
-- [Husky](https://typicode.github.io/husky/) for Git hooks
+- [ESLint](https://eslint.org/) With Standard configurations
+- [MUI](https://mui.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ## Installation
 
-To get started with Rentmor locally, follow these steps:
+To get started with app locally, follow these steps:
 
 1. **Clone the repository**:
 
@@ -20,18 +21,6 @@ To get started with Rentmor locally, follow these steps:
 
    ```bash
    npm install
-   ```
-
-3. **Set up environment variables**:
-
-   Copy the `.env.example` file to `.env.development` when runnung development mode or `.env.production` when runnung production. Then configure it with your local environment settings.
-
-   ```bash
-   cp .env.example .env.development
-   ```
-
-   ```bash
-   cp .env.example .env.production
    ```
 
 ## Usage
@@ -58,29 +47,43 @@ npm run start
 
 ```plaintext
 web/
-├── .husky/
 ├── .next/
 ├── .vscode/
 ├── node_modules/
 ├── public/
 ├── src/
+|   ├── api/
 │   ├── app/
-│   ├── assets/
 │   ├── components/
-│   ├── ui/
-│   └── utils/
-├── .env.development
-├── .env.example
-├── .env.production
+│   └── lib/
 ├── .eslintignore
 ├── .eslintrc.json
 ├── .gitignore
-├── .prettierignore
-├── .prettierrc
 ├── next.config.mjs
 ├── package-lock.json
 ├── package.json
 ├── README.md
 └── tsconfig.json
 ```
-# frontend
+# Assessment Questions
+
+- Listing Component with filters
+
+The api just provide the single data of a random user. To get the desired number of users we need to pass the "results" param to the api which accepts a number and returns the all users without any pagination so I handled the pagination on frontend using MUI Component.
+
+    - Filters
+
+    I applied the gender filter on the listing page. The api accepts a "gender" param to filter the results based on male and female.
+
+    results - for getting number of desired users
+    gender - for getting the male or female users 
+
+- Search Functionality
+
+The api does not provide any response for search query so I used the MUI table component  search for filtering the results on frontend. In real projects, we send the input text as a query param to the get api request and then based on input text the backend server send filtered data.
+
+- Public Profile Page
+
+I created a new page/route to navigate on the profile page. The api does not provide data for a specific user that are listed on the listing page, so I pass the data as a query param to the path as it is the easiest and simplest way to pass data to another route. And on the profile page route i extracted the data and use accordingly
+
+
