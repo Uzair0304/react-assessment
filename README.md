@@ -13,8 +13,8 @@ To get started with app locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone git@github.com:techIlsa/directrope.git
-   cd web
+   git clone https://github.com/Uzair0304/react-assessment.git
+   cd react-assessment
    ```
 
 2. **Install dependencies**:
@@ -46,7 +46,7 @@ npm run start
 ## Project Structure
 
 ```plaintext
-web/
+react-assessment/
 ├── .next/
 ├── .vscode/
 ├── node_modules/
@@ -67,16 +67,16 @@ web/
 ```
 # Assessment Questions
 
-- Listing Component with filters
+- Listing Page
 
 The api just provide the single data of a random user. To get the desired number of users we need to pass the "results" param to the api which accepts a number and returns the all users without any pagination so I handled the pagination on frontend using MUI Component.
 
-    - Filters
+- Listing page with Filters
 
-    I applied the gender filter on the listing page. The api accepts a "gender" param to filter the results based on male and female.
+I applied the gender filter on the listing page. The api accepts a "gender" param to filter the results based on male and female.
 
-    results - for getting number of desired users
-    gender - for getting the male or female users 
+results - for getting number of desired users
+gender - for getting the male or female users 
 
 - Search Functionality
 
@@ -84,6 +84,6 @@ The api does not provide any response for search query so I used the MUI table c
 
 - Public Profile Page
 
-I created a new page/route to navigate on the profile page. The api does not provide data for a specific user that are listed on the listing page, so I pass the data as a query param to the path as it is the easiest and simplest way to pass data to another route. And on the profile page route i extracted the data and use accordingly
+I created a new page/route to navigate on the profile page. The api does not provide data for a specific user that are listed on the listing page, so I pass the data as a query param to the path as it is the easiest and most simplest way to pass data to another route. And on the profile page route I extracted the data and use accordingly
 
 
