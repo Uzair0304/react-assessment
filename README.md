@@ -1,7 +1,7 @@
 ## Technologies Used
 
 - [React.js](https://react.dev/) - used for components
-- [Next.js](https://nextjs.org/) - used only for routing here
+- [Next.js](https://nextjs.org/) - used only for routing purpose
 - [ESLint](https://eslint.org/) - to detect linting errors
 - [MUI](https://mui.com/) - used for UI components
 - [TailwindCSS](https://tailwindcss.com/) - used for styling
@@ -84,6 +84,8 @@ The api does not provide any response for search query so I used the MUI table c
 
 - Public Profile Page
 
-I created a new page/route to navigate on the profile page. The api does not provide data for a specific user that are listed on the listing page, so I pass the data as a query param to the path as it is the easiest and most simplest way to pass data to another route. And on the profile page route I extracted the data and use accordingly
+I created a new page/route to navigate on the profile page. The api does not provide data for a specific user that are listed on the listing page, so I pass the data as a query param to the path as it is the easiest and most simplest way to pass data to another route. And on the profile page route I extracted the data and use accordingly.
+
+#### Note: In real projects, we prefer to get the specific user data from the backend api by passing its unique id
 
 
